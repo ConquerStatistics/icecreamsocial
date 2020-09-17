@@ -1,0 +1,25 @@
+<h1>Create a new ice cream listing :)</h1>
+
+<%= form_with scope: :icecream, url: icecreams_path, local: true do |f| %>
+
+<p>
+  <%= f.label :ice_cream %> <br>
+  <%= f.text_field :ice_cream %><br>
+  <%= f.label :flavor %> <br>
+  <%= f.text_field :flavor %><br>
+  <%= f.label :presentation %> <br>
+  <%= f.text_field :presentation %><br>
+  <%= f.label :color_appearance %> <br>
+  <%= f.text_field :color_appearance %><br>
+  <%= f.label :aroma %> <br>
+  <%= f.text_field :aroma %><br>
+  <%= f.label :texture %> <br>
+  <%= f.text_field :texture %><br>
+</p>
+
+<p>
+<%=f.submit %>
+</p>
+
+
+<% end %>
