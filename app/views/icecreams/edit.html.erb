@@ -1,4 +1,4 @@
-<h1>Create a new ice cream listing :) Intructions below!</h1>
+<h1> Edit an ice cream listing :) Intructions below!</h1>
 
 <h2>Please enter the following information for your ice cream using the scale below:
 Ice Cream Name:
@@ -17,7 +17,7 @@ Texture: rate 0-20 </h2>
 </ul>
 <% end %>
 
-<%= form_with scope: :icecream, url: icecreams_path, local: true do |f| %>
+<%= form_with(model: @icecream, local: true ) do |f| %>
 
 <p>
   <%= f.label :ice_cream %> <br>
