@@ -1,0 +1,27 @@
+<h1>Here is a list of everyone's favorite ice cream! Add yours here :)</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ice Cream Name:</th>
+      <th>Flavor: rate 0-50</th>
+      <th>Presentation: rate 0-10</th>
+      <th>Color/Appearance: rate 0-10</th>
+      <th>Aroma: rate 0-10</th>
+      <th>Texture: rate 0-20</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @icecreams.each do |icecream| %>
+    <tr>
+      <td><%= icecream.ice_cream %></td>
+      <td><%= icecream.flavor %></td>
+      <td><%= icecream.presentation %></td>
+      <td><%= icecream.color_appearance %></td>
+      <td><%= icecream.aroma %></td>
+      <td>placeholder</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

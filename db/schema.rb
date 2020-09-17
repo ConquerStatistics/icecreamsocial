@@ -10,11 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_16_010138) do
+ActiveRecord::Schema.define(version: 2020_09_17_135012) do
 
   create_table "articles", force: :cascade do |t|
     t.string "iceCream"
     t.text "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ice_creams", force: :cascade do |t|
+    t.string "ice_cream"
+    t.float "flavor"
+    t.float "presentation"
+    t.float "color_appearance"
+    t.float "aroma"
+    t.float "texture"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
