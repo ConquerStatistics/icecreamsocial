@@ -15,6 +15,7 @@ class IcecreamsController < ApplicationController
   end
 
   def edit
+    byebug
     @icecream = IceCream.find(params[:id])
   end
 
