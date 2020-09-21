@@ -15,7 +15,6 @@ class IcecreamsController < ApplicationController
   end
 
   def edit
-    byebug
     @icecream = IceCream.find(params[:id])
   end
 
@@ -30,6 +29,20 @@ class IcecreamsController < ApplicationController
   end
 
 def update
+  @icecream = IceCream.find(params[:id])
+  if @icecream.update(params.require(:icecream).permit(:ice_cream, :flavor, :presentation, :color_appearance, :aroma, :texture))
+    flash[:notice] = "Article of updated successfully"
+    redirect_to icecreams_path(@icecream)
+  else
+  render 'edit'
+
+  end
+end
+
+def destroy
+  @icecream = IceCream.find(params[:id])
+  redirect_to icecream_path
+  @icecream.destroy
 
 end
 

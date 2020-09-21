@@ -21,7 +21,7 @@
         <td><%= icecream.color_appearance %></td>
         <td><%= icecream.aroma %></td>
         <td><%= icecream.texture %></td>
-        <td>placeholder</td>
+        <td><%= link_to 'Delete', icecream_path(icecream), method: :delete%></td>
       </tr>
     <% end %>
   </tbody>
