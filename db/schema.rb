@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_17_135012) do
+ActiveRecord::Schema.define(version: 2020_09_21_235142) do
 
   create_table "articles", force: :cascade do |t|
     t.string "iceCream"
     t.text "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "blogs", force: :cascade do |t|
+    t.string "user_name"
+    t.string "ice_cream_flavor"
+    t.string "ice_cream_parlor"
+    t.string "city"
+    t.string "state"
+    t.text "blog"
   end
 
   create_table "ice_creams", force: :cascade do |t|
