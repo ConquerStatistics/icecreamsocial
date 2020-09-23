@@ -1,4 +1,4 @@
-<h1>Add A New Ice Cream</h1>
+<h1>Add A New Blog Post</h1>
 
 <% if @article.errors.any? %>
 <h2>The following errors prevented the article from being saved</h2>
@@ -13,9 +13,9 @@
 <%= form_with scope: :article, url: articles_path, local: true do |f| %>
 
 <p>
-  <%= f.label :iceCream %> <br>
+  <%= f.label :"Blog Post Title" %> <br>
   <%= f.text_field :iceCream %><br>
-  <%= f.label :description %> <br>
+  <%= f.label :"Please enter the blog below (We recommend that you copy and paste from word)" %> <br>
   <%= f.text_area :description %><br>
 </p>
 
