@@ -1,4 +1,5 @@
-<h1>Add A New Blog Post</h1>
+<div id="page-content">
+  <h1 class = "text-center mt-4"> Add a New Blog Post</h1>
 
 <% if @article.errors.any? %>
 <h2>The following errors prevented the article from being saved</h2>
@@ -11,17 +12,23 @@
   </ul>
     <% end %>
 <%= form_with scope: :article, url: articles_path, local: true do |f| %>
+  <div class="form-group row">
+  <%= f.label :title, class: "col-2 col-form-label" %>
+  <div class = "col-10">
+    <%= f.text_field :iceCream, class: "form-control" %>
+  </div>
+  </div>
 
-<p>
-  <%= f.label :"Blog Post Title" %> <br>
-  <%= f.text_field :iceCream %><br>
-  <%= f.label :"Please enter the blog below (We recommend that you copy and paste from word)" %> <br>
-  <%= f.text_area :description %><br>
-</p>
+  <div class="form-group row">
+  <%= f.label :blog, class: "col-2 col-form-label" %>
+  <div class="col-10">
+  <%= f.text_area :description, rows: 10, class: "form-control" %>
+</div>
+
 
 <p>
 <%= f.submit %>
 </p>
 
-
+</div>
 <% end %>

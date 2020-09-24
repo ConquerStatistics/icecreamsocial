@@ -1,6 +1,7 @@
 
 
 <html>
+<div id="page-content">
   <head>
     <title>Ics</title>
     <%= csrf_meta_tags %>
@@ -10,15 +11,16 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
-  
+
 
 <div class="card text-center" style="width: 45rem;">
   <img src="/images/ics.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Add an Ice Cream!</h5>
     <p class="card-text"> We would love for you to rate your favorite ice creams :)</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="http://localhost:3000/icecreams/new" class="btn btn-primary">Rank an ice cream!</a>
   </div>
 </div>
 <table>
@@ -45,4 +47,5 @@
       </tr>
     <% end %>
   </tbody>
+  </div>
 </table>
