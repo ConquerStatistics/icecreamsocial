@@ -2,11 +2,15 @@
 
 .navbar {
 
-background-color: white !important;
+background-color: black !important;
+        color:#555555;
+        font-size: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: normal;
 
 }
 .nav-link {
-  color: grey !important;
+  color: #15d4a7 !important;
 }
 
 #logo{
@@ -15,5 +19,24 @@ background-color: white !important;
 
 #page-content {
   flex: 1 0 auto;
-  background-color: lightgrey;
+
+}
+
+.container{
+  width:70%;
+  margin:auto;
+}
+
+.card-title {
+  padding:10px;
+  border-radius:15px;
+  font-size: 40px;
+}
+
+.card-text {
+  padding:10px;
+  border-radius:15px;
+  font-size: 30px;
+  font-family: Tahoma;
+  font-weight:80;
 }

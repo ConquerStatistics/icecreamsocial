@@ -3,6 +3,7 @@
 <html>
 <div id="page-content">
   <head>
+      <div class="p-3 mb-2 bg-secondary text-white">
     <title>Ics</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,15 +15,18 @@
 
   <body>
 
+    <div class="container">
+      <div class="card text-center" style="width: 45rem;">
+        <img src="/images/ics.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
 
-<div class="card text-center" style="width: 45rem;">
-  <img src="/images/ics.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Add an Ice Cream!</h5>
-    <p class="card-text"> We would love for you to rate your favorite ice creams :)</p>
-    <a href="http://localhost:3000/icecreams/new" class="btn btn-primary">Rank an ice cream!</a>
-  </div>
-</div>
+          <a href="http://localhost:3000/icecreams/new" class="btn btn-light">Rank an ice cream!</a>
+        </div>
+      </div>
+    </div>
+<div class="container">
+
+
 <table>
   <thead>
     <tr>
@@ -36,6 +40,10 @@
   </thead>
 
   <tbody>
+
+    </div>
+    <div class="container">
+
     <% @icecreams.each do |icecream| %>
       <tr>
         <td><%= icecream.ice_cream %></td>
@@ -46,6 +54,9 @@
         <td><%= icecream.texture %></td>
       </tr>
     <% end %>
+    </div>
+    </div>
+    </div>
   </tbody>
   </div>
 </table>
