@@ -26,6 +26,7 @@ class IcecreamsController < ApplicationController
     else
       render 'new'
     end
+
   end
 
 def update

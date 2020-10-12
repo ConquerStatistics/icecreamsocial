@@ -4,4 +4,10 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def intro1
+  end
+
+  def index
+  end
 end

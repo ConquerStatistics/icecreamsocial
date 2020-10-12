@@ -2,16 +2,9 @@
   <div class="container">
 
 
-<h1>Create a new ice cream listing :) </h1>
+<h1>How have you been? We would love to hear from you! </h1>
 
 
-<h2>Please enter the following information for your ice cream using the scale below:
-Ice Cream Name:
-Flavor: rate 0-50
-Presentation: rate 0-10
-Color/Appearance: rate 0-10
-Aroma: rate 0-10
-Texture: rate 0-20 </h2>
 
 <% if @icecream.errors.any? %>
 <h2>The following error(s) prevented the ice cream from being saved</h2>
@@ -25,21 +18,22 @@ Texture: rate 0-20 </h2>
 <%= form_with scope: :icecream, url: icecreams_path, local: true do |f| %>
 
 <p>
-  <%= f.label :ice_cream %> <br>
+  <%= f.label :"Name" %> <br>
   <%= f.text_field :ice_cream %><br>
-  <%= f.label :flavor %> <br>
+  <%= f.label :"Year Graduated" %> <br>
   <%= f.text_field :flavor %><br>
-  <%= f.label :presentation %> <br>
-  <%= f.text_field :presentation %><br>
-  <%= f.label :color_appearance %> <br>
-  <%= f.text_field :color_appearance %><br>
-  <%= f.label :aroma %> <br>
+  <%= f.label :"Major" %> <br>
+  <%= f.text_field :"presentation" %><br>
+  <%= f.label :"Favorite Memory" %> <br>
+  <%= f.text_area :color_appearance %><br>
+  <%= f.label :"Current Job" %> <br>
   <%= f.text_field :aroma %><br>
-  <%= f.label :texture %> <br>
-  <%= f.text_field :texture %><br>
+  <%= f.label :"Life Update" %> <br>
+  <%= f.text_area :texture %><br>
 </p>
 
 <p>
+
 <%=f.submit %>
 </p>
 </div>
